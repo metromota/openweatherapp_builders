@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.App {
+  @apply w-screen h-screen flex justify-center items-center;
+}
+
+.CardApp {
+  @apply w-[90%] h-auto md:w-[40%] rounded-md p-8;
+}
+
+.CardAppHeader {
+  @apply text-blue-500 text-center font-black text-3xl;
+}
+
+.CardAppBody {
+  @apply mx-auto text-center;
+}
+
+.CardAppFooter {
+  @apply mx-auto w-[50%] border-t-[1px] py-2 text-center text-zinc-400 mt-[100px];
+}
+
+.LoadingContainer {
+  @apply w-full h-full flex justify-center items-center p-4;
+}
+
+.Loading {
+  @apply text-blue-500 animate-spin;
+}
+
+.CardWeather {
+  @apply my-4;
+}
+
+.CardWeather>p {
+  @apply text-zinc-700;
+}
+
+.CardLocalization {
+  @apply my-4 shadow-md rounded-xl p-4 border;
+}
+
+.CardLocalization>p {
+  @apply text-zinc-400;
+}
+
+.Btn {
+  @apply border p-4 my-4 rounded-xl bg-blue-500 text-white;
+}
+
+.Btn:hover {
+  background-color: rgba(37, 99, 235, 1);
+  color: white;
+  transition: .3s;
+}
