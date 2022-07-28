@@ -22,7 +22,7 @@ function Display() {
             let response = await Api.get(weatherServiceEndpoint)
             setDataWeather(response.data)
             setLoading(false)
-        } 
+        }
 
         let { latitude, longitude } = geolocation
         let isValidToRequest = latitude && longitude
