@@ -2,13 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+@keyframes appearEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.Display {
+  animation: all;
+  animation-name: appearEffect;
+  animation-duration: 3000ms;
+}
 
 .App {
   @apply w-screen h-screen flex justify-center items-center;
 }
 
 .CardApp {
-  @apply w-[90%] h-auto md:w-[40%] rounded-md p-8;
+  @apply w-[90%] h-[600px] md:w-[45%] xl:w-[35%] rounded-md p-8 flex flex-col justify-between;
 }
 
 .CardAppHeader {
@@ -17,10 +38,14 @@
 
 .CardAppBody {
   @apply mx-auto text-center;
+  animation: all;
+  animation-name: appearEffect;
+  animation-duration: 3000ms;
+
 }
 
 .CardAppFooter {
-  @apply mx-auto w-[50%] border-t-[1px] py-2 text-center text-zinc-400 mt-[100px];
+  @apply mx-auto w-[50%] border-t-[1px] py-2 text-center text-slate-500 mt-[100px];
 }
 
 .LoadingContainer {
@@ -36,7 +61,7 @@
 }
 
 .CardWeather>p {
-  @apply text-zinc-700;
+  @apply text-slate-600 font-mono;
 }
 
 .CardLocalization {
@@ -44,11 +69,11 @@
 }
 
 .CardLocalization>p {
-  @apply text-zinc-400;
+  @apply text-slate-500;
 }
 
 .Btn {
-  @apply border p-4 my-4 rounded-xl bg-blue-500 text-white;
+  @apply border p-4 my-4 rounded-xl bg-slate-500 text-white;
 }
 
 .Btn:hover {
